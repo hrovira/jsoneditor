@@ -3,7 +3,7 @@
 http://jsoneditoronline.org
 
 
-## 2014-05-21, version 2.3.6.0.354
+## 2014-05-21, version 2.3.6-hrov
 - Added custom output to the items listing exposing a preview of collapsed items within an array, showing standard fields from Google APIs JSON.
 - Behaves normal if none of the fields are found.
 - Code affected ```Node.prototype.updateDom``` in ```jsoneditor/js/node.js```

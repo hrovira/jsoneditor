@@ -1,6 +1,6 @@
 {
   "name": "jsoneditor-hrovira",
-  "version": "2.3.6.0.354",
+  "version": "2.3.6-hrov",
   "description": "[FORK] A web-based tool to view, edit and format JSON. This fork adds custom output to the items listing. It exposes a preview of collapsed items within an array, showing standard fields from Google APIs JSON. See README.md",
   "tags": [
     "json",
