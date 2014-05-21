@@ -1,19 +1,18 @@
 {
-  "name": "jsoneditor",
-  "version": "2.3.6",
-  "description": "A web-based tool to view, edit and format JSON",
+  "name": "jsoneditor-hrovira",
+  "version": "2.3.6.354",
+  "description": "[FORK] A web-based tool to view, edit and format JSON. This fork adds custom output to the items listing. It exposes a preview of collapsed items within an array, showing standard fields from Google APIs JSON. See README.md",
   "tags": [
     "json",
     "editor",
     "viewer",
     "formatter"
   ],
-  "homepage": "http://jsoneditoronline.org/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/josdejong/jsoneditor.git"
+    "url": "https://github.com/hrovira/jsoneditor.git"
   },
-  "bugs": "https://github.com/josdejong/jsoneditor/issues",
+  "bugs": "https://github.com/hrovira/jsoneditor/issues",
   "ignore": [
     "app",
     "build",

@@ -1,6 +1,13 @@
 # JSON Editor Online
 http://jsoneditoronline.org/
 
+### Fork Description
+This fork adds custom output to the items listing. It exposes a 'preview' of collapsed items within an array,
+showing standard fields from Google APIs JSON. Behaves normal if none of the fields are found.
+  * Code affected ```Node.prototype.updateDom``` in ```jsoneditor/js/node.js```
+  * Fields exposed within Node.prototype.updateDom: ``` "kind", "title", "label", "id" ```
+
+Many thanks to the JSON Editor authors for a beautiful component.
 
 ### Description
 
@@ -59,7 +66,7 @@ with npm:
 
 with bower:
 
-    bower install jsoneditor
+    bower install jsoneditor-hrovira
 
 download:
 

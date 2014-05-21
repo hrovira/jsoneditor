@@ -1518,7 +1518,17 @@ Node.prototype.updateDom = function (options) {
       domValue.innerHTML = '[' + count + ']';
     }
     else if (this.type == 'object') {
-      domValue.innerHTML = '{' + count + '}';
+        var contents = this.getValue();
+        if (contents && (Object.keys(contents)).length) {
+            var html = "";
+            html += (contents["kind"] || "");
+            html += (contents["title"] ? " \"" + contents["title"] + "\"" : "");
+            html += (contents["label"] ? " \"" + contents["label"] + "\"" : "");
+            html += (contents["id"] ? " [" + contents["id"] + "]" : "");
+            domValue.innerHTML = html;
+        } else {
+            domValue.innerHTML = '{' + count + '}';
+        }
     }
     else {
       domValue.innerHTML = this._escapeHTML(this.value);

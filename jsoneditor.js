@@ -28,7 +28,7 @@
  *
  * @author  Jos de Jong, <wjosdejong@gmail.com>
  * @version 2.3.6
- * @date    2014-01-03
+ * @date    2014-05-21
  */
 (function () {
 
@@ -2826,7 +2826,17 @@ Node.prototype.updateDom = function (options) {
       domValue.innerHTML = '[' + count + ']';
     }
     else if (this.type == 'object') {
-      domValue.innerHTML = '{' + count + '}';
+        var contents = this.getValue();
+        if (contents && (Object.keys(contents)).length) {
+            var html = "";
+            html += (contents["kind"] || "");
+            html += (contents["title"] ? " \"" + contents["title"] + "\"" : "");
+            html += (contents["label"] ? " \"" + contents["label"] + "\"" : "");
+            html += (contents["id"] ? " [" + contents["id"] + "]" : "");
+            domValue.innerHTML = html;
+        } else {
+            domValue.innerHTML = '{' + count + '}';
+        }
     }
     else {
       domValue.innerHTML = this._escapeHTML(this.value);
