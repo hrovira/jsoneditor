@@ -30,6 +30,7 @@
   ],
   "homepage": "https://github.com/hrovira/jsoneditor",
   "authors": [
+      "Jos de Jong <wjosdejong@gmail.com>",
     "hrovira"
   ],
   "main": "jsoneditor.js",
