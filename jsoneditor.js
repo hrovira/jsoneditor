@@ -28,7 +28,7 @@
  *
  * @author  Jos de Jong, <wjosdejong@gmail.com>
  * @version 2.3.6-hrov
- * @date    2014-05-21
+ * @date    2014-05-28
  */
 (function () {
 
@@ -2924,8 +2924,10 @@ Node.prototype._createDomValue = function () {
       domValue = document.createElement('a');
       domValue.className = 'value';
       domValue.href = this.value;
-      domValue.target = '_blank';
       domValue.innerHTML = this._escapeHTML(this.value);
+
+      var options = (this.editor || {}).options || {};
+      if (!options["openLinksInSameWindow"]) domValue.target = '_blank';
     }
     else {
       // create and editable or read-only div
